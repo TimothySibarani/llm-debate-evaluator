@@ -1,126 +1,101 @@
 import os
-import time
 import requests
-import json
+from datasets import load_dataset
 
-# --- Konfigurasi File State ---
-GENERATOR_FILE = "generator_output.txt"
-VERIFIER_FILE = "verifier_feedback.txt"
-PROMPT_FILE = "user_prompt.txt"
-
-# --- Konfigurasi Ollama ---
+# --- Konfigurasi Evaluasi ---
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-# Anda bisa mengganti model di bawah ini sesuai yang Anda unduh di Ollama
-# Contoh untuk heterogeneous (model berbeda): GENERATOR = "llama3", VERIFIER = "qwen"
-GENERATOR_MODEL = "gemma:2b" 
-VERIFIER_MODEL = "gemma:2b"
-
-def setup_workspace():
-    """Membersihkan workspace sebelum eksperimen dimulai."""
-    for file in [GENERATOR_FILE, VERIFIER_FILE, PROMPT_FILE]:
-        if os.path.exists(file):
-            os.remove(file)
-    print("[SYSTEM] Workspace dibersihkan. Memulai sekuens...")
-
-def read_file(filepath):
-    """Membaca isi file teks."""
-    if os.path.exists(filepath):
-        with open(filepath, "r", encoding="utf-8") as f:
-            return f.read().strip()
-    return ""
-
-def write_file(filepath, content):
-    """Menulis konten ke file teks."""
-    with open(filepath, "w", encoding="utf-8") as f:
-        f.write(content)
+GENERATOR_MODEL = "gemma:2b"   
+VERIFIER_MODEL = "gemma:2b"     
+MAX_TURNS = 5 # Batas putaran debat per soal
 
 def call_ollama(model_name, prompt, system_prompt):
-    """Fungsi pembantu untuk memanggil API lokal Ollama."""
-    payload = {
-        "model": model_name,
-        "prompt": prompt,
-        "system": system_prompt,
-        "stream": False, # Kita set False agar jawaban diterima
-        "keep_alive": 0 #utuh sekaligus (bukan per kata)
-    }
-    
+    payload = {"model": model_name, "prompt": prompt, "system": system_prompt, "stream": False, "keep_alive": 0}
     try:
         response = requests.post(OLLAMA_API_URL, json=payload)
-        response.raise_for_status() # Akan memicu error jika server Ollama mati
-        result = response.json()
-        return result.get("response", "")
-    except requests.exceptions.RequestException as e:
-        print(f"\n[ERROR] Gagal menghubungi Ollama. Pastikan Ollama menyala! Detail: {e}")
-        return "[ERROR SERVER LLM]"
+        return response.json().get("response", "").strip()
+    except Exception as e:
+        return f"[ERROR]: {e}"
 
-# --- Agen Berbasis LLM ---
-def generator_agent(turn, user_prompt):
-    """Agen 1: Bertugas menjawab pertanyaan dan memperbaiki jawaban berdasarkan kritik."""
-    print(f"\n[Agent 1 - Generator ({GENERATOR_MODEL})] Sedang memikirkan jawaban (Turn {turn})...")
+def run_debate_on_question(question, ground_truth):
+    current_answer = ""
+    feedback = ""
+    is_verified = False
     
-    system_prompt = "Anda adalah asisten ahli yang logis dan detail. Jawab pertanyaan pengguna dengan seakurat mungkin. Jika diberikan kritik, perbaiki jawaban Anda sebelumnya."
-    
-    if turn == 1:
-        # Putaran pertama: Langsung jawab pertanyaan user
-        prompt = f"Pertanyaan Pengguna: {user_prompt}\nBerikan jawaban terbaik Anda."
-    else:
-        # Putaran selanjutnya: Jawab berdasarkan kritik dari Verifier
-        feedback = read_file(VERIFIER_FILE)
-        previous_answer = read_file(GENERATOR_FILE)
-        prompt = (f"Pertanyaan Awal: {user_prompt}\n"
-                  f"Jawaban Anda Sebelumnya: {previous_answer}\n\n"
-                  f"Kritik dari Auditor: {feedback}\n\n"
-                  f"Berdasarkan kritik di atas, tolong perbaiki dan berikan jawaban akhir Anda yang lebih akurat dan logis.")
-    
-    output = call_ollama(GENERATOR_MODEL, prompt, system_prompt)
-    write_file(GENERATOR_FILE, output)
-    print(f"[Agent 1] Selesai! Output disimpan ke {GENERATOR_FILE}")
-
-def verifier_agent(turn):
-    """Agen 2: Bertugas mencari celah, cacat logika, atau halusinasi dari Generator."""
-    print(f"\n[Agent 2 - Verifier ({VERIFIER_MODEL})] Menganalisis output Generator (Turn {turn})...")
-    
-    system_prompt = "Anda adalah auditor logika yang skeptis dan kritis. Tugas Anda HANYA MENGKRITIK jawaban, mencari cacat logika, ketidakakuratan fakta, atau halusinasi. Jangan memberikan jawaban langsung kepada pengguna. Berikan kritik maksimal dalam 3 kalimat yang padat."
-    
-    generator_output = read_file(GENERATOR_FILE)
-    user_prompt = read_file(PROMPT_FILE)
-    
-    prompt = (f"Pertanyaan Awal Pengguna: {user_prompt}\n"
-              f"Jawaban Asisten yang harus dievaluasi: {generator_output}\n\n"
-              f"Berikan kritik tajam Anda terhadap jawaban asisten tersebut.")
-    
-    feedback = call_ollama(VERIFIER_MODEL, prompt, system_prompt)
-    write_file(VERIFIER_FILE, feedback)
-    print(f"[Agent 2] Selesai! Kritik disimpan ke {VERIFIER_FILE}")
-
-# --- Logika Looping Orchestrator ---
-def run_debate(initial_prompt, max_turns=2):
-    write_file(PROMPT_FILE, initial_prompt)
-    
-    for turn in range(1, max_turns + 1):
-        print(f"\n{'='*15} TURN {turn} {'='*15}")
+    for turn in range(1, MAX_TURNS + 1):
+        print(f"\n  ➤ Putaran Debat {turn} ".center(50, "."))
         
-        # 1. Generator
-        generator_agent(turn, initial_prompt)
+        # --- GENERATOR ---
+        gen_sys = "Anda ahli matematika. Jawab dengan langkah-langkah (Chain of Thought). Di akhir jawaban, WAJIB tuliskan angka akhirnya saja di dalam kurung siku, contoh: [45]."
+        if turn == 1:
+            gen_prompt = f"Soal: {question}\nBerikan jawaban Anda."
+        else:
+            gen_prompt = (f"Soal Awal: {question}\n"
+                          f"Jawaban Anda Sebelumnya: {current_answer}\n"
+                          f"Koreksi Auditor: {feedback}\n\n"
+                          f"FOKUS PADA SOAL MATEMATIKA AWAL. Perbaiki perhitungan Anda berdasarkan koreksi.")
         
-        # Berhenti jika ini turn terakhir
-        if turn == max_turns:
-            print("\n[SYSTEM] Batas maksimal turn tercapai. Evaluasi selesai.")
-            break
+        current_answer = call_ollama(GENERATOR_MODEL, gen_prompt, gen_sys)
+        print(f"  [ 🤖 ] GENERATOR ({GENERATOR_MODEL}):\n  {current_answer[:200]}... [dipotong]")
+
+        # --- VERIFIER ---
+        ver_sys = (
+            "Anda mesin pemeriksa kunci jawaban. Periksa perhitungan asisten. "
+            "Jika hitungannya BENAR dan MASUK AKAL, jawab HANYA dengan satu kata: 'TERVERIFIKASI'. "
+            "Jika SALAH, tunjukkan letak kesalahan angka atau logikanya."
+        )
+        ver_prompt = f"Soal Asli: {question}\nJawaban Asisten yang diperiksa: {current_answer}\nApakah angka akhirnya benar?"
+        
+        feedback = call_ollama(VERIFIER_MODEL, ver_prompt, ver_sys)
+        print(f"  [ 🕵️ ] VERIFIER ({VERIFIER_MODEL}):\n  {feedback[:200]}... [dipotong]")
+
+        if "TERVERIFIKASI" in feedback.upper():
+            is_verified = True
+            print("  [ ✔️ ] Konsensus Tercapai!")
+            break 
             
-        # 2. Verifier
-        verifier_agent(turn)
+    return current_answer, is_verified
+
+def run_benchmark():
+    print("="*60)
+    print("🚀 MEMULAI BENCHMARK EVALUATOR (MULTI-AGENT)")
+    print(f"Dataset: GSM8K | Gen: {GENERATOR_MODEL} | Ver: {VERIFIER_MODEL}")
+    print("="*60)
+
+    # Mengambil 20 soal pertama
+    dataset = load_dataset("openai/gsm8k", "main", split="test[:20]") 
+    correct_count = 0
+    total_questions = len(dataset)
+    
+    for index, item in enumerate(dataset):
+        question = item['question']
+        exact_answer = item['answer'].split("#### ")[-1].strip()
+
+        print(f"\n{'='*60}\n--- Soal {index + 1}/{total_questions} ---")
+        print(f"Q: {question[:150]}...")
+        print(f"Kunci Jawaban Asli: {exact_answer}")
+
+        # Jalankan debat dan tampilkan prosesnya
+        final_output, consensus = run_debate_on_question(question, exact_answer)
+        
+        print(f"\n>>> HASIL AKHIR SOAL {index + 1}:")
+        print(f"Jawaban Lengkap:\n{final_output}\n")
+        if f"[{exact_answer}]" in final_output:
+            print("[ ✅ ] STATUS: BENAR (Format Tepat)")
+            correct_count += 1
+        elif final_output.strip().endswith(str(exact_answer)) or final_output.strip().endswith(f" {exact_answer}."):
+            print("[ ✅ ] STATUS: BENAR (Deteksi Akhir Kalimat)")
+            correct_count += 1
+        else:
+            print("[ ❌ ] STATUS: SALAH")
+
+    # Kalkulasi Akurasi
+    print("\n" + "="*60)
+    print("[ 📊 ] REKAPITULASI HASIL BENCHMARK (MULTI-AGENT)")
+    accuracy = (correct_count / total_questions) * 100
+    print(f"Total Soal Diuji  : {total_questions}")
+    print(f"Total Jawaban Benar: {correct_count}")
+    print(f"Akurasi Akhir     : {accuracy:.2f}%")
+    print("="*60)
 
 if __name__ == "__main__":
-    setup_workspace()
-    
-    # Prompt pengujian (Sengaja dibuat agak menjebak untuk menguji Verifier)
-    test_prompt = "Jika saya butuh waktu 10 menit untuk merebus 1 telur, berapa lama waktu yang dibutuhkan untuk merebus 5 telur secara bersamaan?"
-    
-    print("=== MEMULAI SISTEM MULTI-AGENT DEBATE (OLLAMA) ===")
-    # Kita set 2 putaran saja untuk tes awal (1x Jawab awal, 1x Kritik, 1x Jawab Revisi)
-    run_debate(initial_prompt=test_prompt, max_turns=2)
-    
-    print("\n=== HASIL AKHIR ===")
-    print("Final Output dari Generator:")
-    print(read_file(GENERATOR_FILE))
+    run_benchmark()

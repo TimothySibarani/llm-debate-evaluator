@@ -1,3 +1,0 @@
-Saat merebus 5 telur secara bersamaan, waktu yang dibutuhkan sama dengan waktu yang dibutuhkan untuk merebus 1 telur. Dengan rumus yang diberikan, waktu untuk 5 telur adalah 5 x 10 menit = 50 menit.
-
-**Jawaban akhir:** 50 menit

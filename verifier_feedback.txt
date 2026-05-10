@@ -1,5 +1,0 @@
-**Kritik:**
-
-1. **Inkonsistensi:** Jawaban yang diberikan adalah 50 menit, sedangkan waktu untuk merebus 1 telur adalah 10 menit. Ini menunjukkan ketidakakuratan dalam rumus.
-2. **Mendekatan:** Dengan menambahkan lebih banyak objek, waktu yang dibutuhkan untuk merebus 5 telur secara bersamaan akan meningkat, yang bertentangan dengan pernyataan awal.
-3. **Misinterpretation:** Jawaban 50 menit mungkin dianggap sebagai waktu yang dibutuhkan untuk merebus 5 telur secara **menyatakan** bersamaan, bukan secara bersamaan.
