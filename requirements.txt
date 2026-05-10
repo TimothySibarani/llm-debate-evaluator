@@ -1,0 +1,2 @@
+# Kebutuhan untuk fase integrasi LLM selanjutnya
+requests
