@@ -1,1 +1,3 @@
-JAWABAN REVISI (Berdasarkan feedback: 'KRITIK: Evaluasi logika pada kalimat 'JAWABAN REVISI (Berdasarkan feedback: 'KRITIK: Evaluasi logika pada kalimat 'JAWABAN AWAL untuk prompt: 'Berapa hasil dari integrasi f(x) dan validasi hukum termodinamika?'. Ini adalah draf pertama saya.'. Pastikan perhitungan/fakta konsisten.'). Logika telah diperbaiki.'. Pastikan perhitungan/fakta konsisten.'). Logika telah diperbaiki.
+Saat merebus 5 telur secara bersamaan, waktu yang dibutuhkan sama dengan waktu yang dibutuhkan untuk merebus 1 telur. Dengan rumus yang diberikan, waktu untuk 5 telur adalah 5 x 10 menit = 50 menit.
+
+**Jawaban akhir:** 50 menit
