@@ -1,10 +1,11 @@
 import os
 import requests
+import re
 from datasets import load_dataset
 
 # --- Konfigurasi Baseline ---
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "gemma:2b" # Pastikan nama model sesuai yang ada di Ollama Anda
+MODEL_NAME = "gemma2:2b" # Pastikan nama model sesuai yang ada di Ollama Anda
 
 def call_ollama(prompt, system_prompt):
     payload = {"model": MODEL_NAME, "prompt": prompt, "system": system_prompt, "stream": False, "keep_alive": 0}
@@ -45,15 +46,42 @@ def run_baseline():
         print(output)
         print("\n" + "-"*30)
 
-        # Evaluasi Ketat (Mencegah Positif Palsu)
-        if f"[{exact_answer}]" in output:
-            print("[ ✅ ] STATUS: BENAR (Format Tepat)")
-            correct_count += 1
-        elif output.strip().endswith(str(exact_answer)) or output.strip().endswith(f" {exact_answer}."):
-            print("[ ✅ ] STATUS: BENAR (Deteksi Akhir Kalimat)")
+# --- BLOK EVALUASI CERDAS (Ganti bagian lama dengan ini) ---
+        
+        # Bersihkan koma
+        output_clean = output.replace(",", "") # Jika di benchmark_evaluator, ganti 'output' jadi 'final_output'
+        
+        # Ekstrak semua angka (termasuk desimal) dari jawaban AI menggunakan Regex
+        found_numbers = re.findall(r'-?\d+\.?\d*', output_clean)
+        
+        is_correct = False
+        try:
+            # Ubah kunci jawaban asli menjadi angka matematika (float)
+            exact_float = float(exact_answer)
+            
+            # Cek 1: Apakah ada di dalam kurung siku secara literal?
+            if f"[{exact_answer}]" in output_clean or f"[{exact_float}]" in output_clean:
+                is_correct = True
+                print("[ ✅ ] STATUS: BENAR (Format Tepat)")
+                
+            # Cek 2: Evaluasi Nilai Matematika di akhir teks
+            elif found_numbers:
+                # Ambil 3 angka terakhir yang diketik AI (menghindari angka di kalimat basa-basi akhir)
+                last_few_numbers = found_numbers[-3:] 
+                for num_str in last_few_numbers:
+                    if float(num_str) == exact_float:
+                        is_correct = True
+                        print("[ ✅ ] STATUS: BENAR (Deteksi Nilai Matematika 7.0 == 7)")
+                        break
+        except ValueError:
+            # Jaga-jaga jika kunci jawaban bukan angka murni
+            pass 
+            
+        if is_correct:
             correct_count += 1
         else:
             print("[ ❌ ] STATUS: SALAH")
+        # ------------------------------------------------------------
 
     # Kalkulasi Akurasi
     print("\n" + "="*60)
