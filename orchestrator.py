@@ -5,8 +5,8 @@ from datasets import load_dataset
 
 # --- Konfigurasi Evaluasi ---
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-GENERATOR_MODEL = "gemma2:2b"   
-VERIFIER_MODEL = "gemma2:2b"     
+GENERATOR_MODEL = "gemma4:e2b"   
+VERIFIER_MODEL = "gemma4:e2b"     
 MAX_TURNS = 5 # Batas putaran debat per soal
 
 def call_ollama(model_name, prompt, system_prompt):

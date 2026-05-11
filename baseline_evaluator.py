@@ -5,7 +5,7 @@ from datasets import load_dataset
 
 # --- Konfigurasi Baseline ---
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
-MODEL_NAME = "gemma2:2b" # Pastikan nama model sesuai yang ada di Ollama Anda
+MODEL_NAME = "gemma4:e2b" # Pastikan nama model sesuai yang ada di Ollama Anda
 
 def call_ollama(prompt, system_prompt):
     payload = {"model": MODEL_NAME, "prompt": prompt, "system": system_prompt, "stream": False, "keep_alive": 0}
