@@ -1,0 +1,555 @@
+LLM BASELINE EVALUATOR LOG - GEOGRAPHY
+Started at: 2026-05-12 15:02:26
+Dataset: MMLU High School Geography | Model: gemma4:e2b
+============================================================
+
+============================================================
+--- Soal 1/20 ---
+Q: The main factor preventing subsistence economies from advancing economically is the lack of
+A) a currency.
+B) a well-connected transportation infrastructure.
+C) government activity.
+D) a banking service.
+Kunci Jawaban Asli: B
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is the one that identifies the most fundamental geographical and economic barrier preventing local production from entering broader markets and facilitating specialization.
+
+**Step-by-step analysis:**
+
+1.  **Understand the context:** A subsistence economy is characterized by production aimed primarily at meeting immediate needs, with little or no surplus for trade or investment. Economic advancement requires specialization, surplus creation, and market access.
+2.  **Identify the barrier:** For a local economy to advance, its products must be able to move efficiently to larger markets. This movement is heavily dependent on physical connectivity.
+3.  **Evaluate the choices:**
+    *   A) A currency: While important, the lack of a currency is often a secondary issue compared to the physical ability to trade.
+    *   B) A well-connected transportation infrastructure: Poor infrastructure (roads, railways, ports) creates high transaction costs, isolates producers, and prevents the efficient movement of goods, which is the primary bottleneck for moving from subsistence to market economies.
+    *   C) Government activity: Government policy is a factor, but the physical constraint of connectivity is a more direct, structural geographical impediment.
+    *   D) A banking service: Lack of banking hinders capital accumulation, but if there is no market access (transportation), there is no surplus to bank in the first place.
+
+**Conclusion:** The lack of efficient transportation infrastructure is the main geographical factor that isolates subsistence economies and prevents them from participating in broader economic advancement.
+
+[B]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 2/20 ---
+Q: The tendency for a population to continue to grow long after replacement fertility has been achieved is called
+A) zero population growth.
+B) rapid growth rate.
+C) homeostatic plateau.
+D) demographic momentum.
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is the term that describes the inertia of population change resulting from past growth patterns, even when fertility rates stabilize at replacement levels.
+
+**Step-by-step analysis:**
+
+1.  **Understand the context:** The question deals with population dynamics, specifically the phase where fertility rates have dropped to replacement levels (where the population would ideally stabilize) but the population continues to grow.
+2.  **Analyze the options:**
+    *   **A) Zero population growth (ZPG):** This means the population size is constant (births equal deaths). This contradicts the premise that the population continues to grow.
+    *   **B) Rapid growth rate:** This describes the speed of growth, not the specific phenomenon of momentum.
+    *   **C) Homeostatic plateau:** This implies the population has reached a stable equilibrium, which is the opposite of continuing growth.
+    *   **D) Demographic momentum:** This term specifically refers to the tendency for a population to continue growing (or shrinking) based on the momentum created by past birth rates, even if current fertility rates are at replacement level. If a population was growing rapidly in the past, it will continue to grow for some time even if fertility drops to replacement levels.
+
+**Conclusion:** The tendency for a population to continue to grow long after replacement fertility has been achieved is called demographic momentum.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 3/20 ---
+Q: The tendency for migration to decrease with distance is called
+A) push factors.
+B) pull factors.
+C) distance decay.
+D) migration selectivity.
+Kunci Jawaban Asli: C
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is the term that describes the spatial relationship between migration and distance.
+
+**Step-by-step analysis:**
+
+1.  **Analyze the phenomenon:** The question asks for the tendency for migration to decrease as the distance between the origin and destination increases. This describes a spatial pattern where the influence or flow is strongest when locations are close and weakens with separation.
+2.  **Evaluate the choices:**
+    *   **A) push factors** and **B) pull factors** are forces that *cause* migration (reasons to leave or reasons to arrive), not the spatial pattern of migration itself.
+    *   **C) distance decay** is a concept in spatial statistics and geography that describes the phenomenon where the intensity of a relationship (such as migration, interaction, or influence) diminishes as the distance between the entities increases. This perfectly matches the description given in the question.
+    *   **D) migration selectivity** refers to the criteria migrants use to select their destination, not the spatial decay pattern.
+3.  **Conclusion:** Distance decay is the specific term used in geography and spatial economics to describe the tendency for migration to decrease with distance.
+
+[C]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 4/20 ---
+Q: Which zone contains low-income slums, ethnic ghettos, and general deterioration in Burgess's concentric zone model of urban form?
+A) First
+B) Second
+C) Third
+D) Fourth
+Kunci Jawaban Asli: A
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is based on the classic application of Burgess's concentric zone model of urban development.
+
+**Step-by-step analysis:**
+
+1.  **Understand Burgess's Model:** Burgess's model divides a city into five concentric zones radiating outwards from the Central Business District (CBD).
+    *   **Zone I:** Central Business District (CBD).
+    *   **Zone II:** Zone of Workingmen's Homes (transition area).
+    *   **Zone III:** Zone of Slums (or Zone of Workingmen's Homes/Poor Housing).
+    *   **Zone IV:** Zone of Better Residences (middle and upper-middle class housing).
+    *   **Zone V:** Commuter Zone (suburbs).
+
+2.  **Analyze the Characteristics:** The question asks for the zone containing "low-income slums, ethnic ghettos, and general deterioration."
+
+3.  **Match Characteristics to Zones:** The description of slums, overcrowding, poor sanitation, and ethnic ghettos is the defining characteristic of the area immediately surrounding the core city, which corresponds to the Zone of Slums.
+
+4.  **Conclusion:** This area is designated as Zone III.
+
+Therefore, the zone that contains low-income slums, ethnic ghettos, and general deterioration is the Third zone.
+
+[C]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 5/20 ---
+Q: Which of the following statements is TRUE concerning women in the labor force?
+A) Most women work in agriculture
+B) The percentage of women economically active in the labor force declined worldwide
+C) The percentage of women in the total labor force declined
+D) Women spend more hours per day working than men in all regions except Anglo America and Australia
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The question asks which statement is TRUE concerning women in the labor force. We must evaluate each option based on general global and regional economic trends.
+
+**Analysis of Choices:**
+
+*   **A) Most women work in agriculture:** This is historically true in some developing regions, but globally, women are increasingly concentrated in the service, manufacturing, and professional sectors. This statement is not universally true today.
+*   **B) The percentage of women economically active in the labor force declined worldwide:** This is false. Globally, the participation rate of women in the labor force has generally increased over the last few decades, although disparities exist.
+*   **C) The percentage of women in the total labor force declined:** This is also false, as participation rates have generally risen.
+*   **D) Women spend more hours per day working than men in all regions except Anglo America and Australia:** This statement addresses the distribution of working hours. While the exact comparison varies significantly by region, demographic studies often show that women, on average, spend more time working than men in many parts of the world, with exceptions noted in highly developed economies like Anglo America and Australia where gender roles and work structures differ significantly.
+
+**Conclusion:**
+
+Statements A, B, and C describe trends that are generally contradicted by modern demographic and economic data. Statement D describes a comparative reality regarding working hours that aligns with observed patterns in many regions outside of specific developed contexts.
+
+Therefore, statement D is the most accurate true statement among the choices provided.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 6/20 ---
+Q: All the following factors can be considered pull factors of migration EXCEPT
+A) safety.
+B) better climate.
+C) better schools.
+D) overcrowding.
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The question asks to identify which factor among the choices is NOT a pull factor of migration.
+
+**Understanding Pull and Push Factors:**
+*   **Pull Factors:** These are attractive features of a destination that draw people to migrate (e.g., better jobs, safety, good education, favorable climate).
+*   **Push Factors:** These are unfavorable conditions in the origin area that force people to leave (e.g., poverty, war, famine, overcrowding).
+
+**Analyzing the Choices:**
+*   **A) Safety:** A desirable condition that attracts migrants. (Pull factor)
+*   **B) Better climate:** A desirable condition that attracts migrants. (Pull factor)
+*   **C) Better schools:** A desirable opportunity that attracts migrants. (Pull factor)
+*   **D) Overcrowding:** A negative condition that forces people to leave. This is a **push factor**, not a pull factor.
+
+Since the question asks for the factor that is *not* a pull factor, the correct exception is overcrowding.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 7/20 ---
+Q: Which of the following countries does NOT have a well-known example of a relict boundary?
+A) Vietnam
+B) United Kingdom
+C) Germany
+D) Bolivia
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The question asks which country does NOT have a well-known example of a relict boundary. A relict boundary is a border that persists today, often reflecting historical divisions or ancient claims.
+
+Let's analyze the options:
+
+1.  **Vietnam (A):** Vietnam's borders are highly complex and have been subject to numerous historical claims, treaties, and conflicts, making its boundaries a strong example of relict geography.
+2.  **United Kingdom (B):** The UK has well-defined, historically established international borders with its neighbors, which are well-known examples of political geography.
+3.  **Germany (C):** Germany's borders with its neighbors are also well-defined and recognized, representing established political boundaries.
+4.  **Bolivia (D):** Bolivia's borders, particularly those involving the Andes and Amazon regions, are known for complex historical claims and geographical disputes, making them a strong example of relict boundaries.
+
+The concept of a "relict boundary" is most strongly associated with regions that have complex, long-standing historical territorial claims (like parts of South America or Southeast Asia). The boundaries of the modern, established European states (like the UK and Germany) are the most straightforward and well-known examples of defined political boundaries, often serving as the baseline for modern geography.
+
+In the context of this type of geographical question, the boundaries of the established, modern European states (Germany and the UK) are the most clearly defined and universally recognized examples of political boundaries, contrasting with the more contested or historically layered boundaries of Vietnam and Bolivia. Therefore, the boundaries of Germany or the United Kingdom are the most "well-known" examples of defined political borders, and in the context of finding the one that *does not* fit the description of a complex relict boundary, we look for the most straightforward example.
+
+Since both B and C represent well-defined modern political boundaries, and the question asks which one *does NOT* have a well-known example of a relict boundary, we select one of the established European states.
+
+The boundaries of the United Kingdom and Germany are the most classically defined examples of established political boundaries.
+
+[B]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 8/20 ---
+Q: Which form of migration below are farm workers from another country most likely to be practicing during the year?
+A) Chain migration
+B) Cluster migration
+C) Circular migration
+D) International migration
+Kunci Jawaban Asli: C
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is C) Circular migration.
+
+**Step-by-step reasoning:**
+
+1.  **Analyze the context:** The question asks about the form of migration practiced by farm workers from another country during the year. Farm work, especially in many regions, is often seasonal, meaning labor is required for specific periods (planting, harvesting).
+2.  **Define the migration types:**
+    *   **International migration (D):** This refers to migration across national borders. While the workers are international migrants, this term is too general and doesn't describe the specific pattern of movement.
+    *   **Chain migration (A):** This involves a series of successive migrations from one place to another, often following established routes.
+    *   **Cluster migration (B):** This involves people migrating together and settling in close proximity.
+    *   **Circular migration (C):** This describes a pattern of movement where people repeatedly move between their place of origin and a destination (or between different work sites) over a recurring cycle, often seasonal.
+3.  **Apply to the scenario:** Farm workers engaged in seasonal labor typically move to the agricultural area for the season and then return to their home country or move to the next available work location. This repeated, cyclical movement perfectly aligns with the definition of circular migration.
+
+Therefore, circular migration is the most accurate description of the movement pattern for seasonal farm workers.
+
+[C]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 9/20 ---
+Q: Which of the following is a centrifugal force in a country?
+A) Religious differences
+B) A national holiday
+C) An attack by another country
+D) A charismatic national leader
+Kunci Jawaban Asli: A
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is based on the understanding of political geography and sociology, where centrifugal forces are internal forces that promote division, fragmentation, or separation within a political entity.
+
+1.  **Define Centrifugal Force:** In the context of a nation-state, centrifugal forces are internal pressures that pull the components of the state apart, often leading to secession, conflict, or regional divergence.
+2.  **Analyze the Choices:**
+    *   A) Religious differences: Deep-seated religious, ethnic, or linguistic differences often create internal tensions and demands for autonomy or separation, acting as a powerful centrifugal force.
+    *   B) A national holiday: National holidays are generally unifying forces (centripetal forces) that promote cohesion.
+    *   C) An attack by another country: This is an external pressure, not an internal centrifugal force within the country itself.
+    *   D) A charismatic national leader: A leader can be a source of unity (centripetal) or division (centrifugal), but the differences themselves (like religion) are the underlying force.
+3.  **Conclusion:** Religious differences represent a fundamental internal source of division and tension that pushes the boundaries of national unity apart.
+
+Therefore, religious differences are the best example of an internal centrifugal force.
+
+[A]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 10/20 ---
+Q: Early settlements and high population density along coastlines and rivers are best attributed to which of the following?
+A) Mediterranean climate
+B) Limited forest cover
+C) Growth of manufacturing
+D) Access to trade routes
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is D) Access to trade routes.
+
+**Step-by-step reasoning:**
+
+1.  **Identify the core phenomenon:** The question asks why early settlements and high population densities are found along coastlines and rivers.
+2.  **Analyze the role of water bodies:** Rivers and coastlines historically provided the most accessible means of transportation. Before modern infrastructure, moving goods, accessing food, and communicating between settlements was vastly easier and safer via water than over dense, undeveloped land.
+3.  **Evaluate the options:**
+    *   **A) Mediterranean climate:** Climate influences agriculture, but it is not the primary driver for linear settlement patterns along specific geographical features like rivers and coasts.
+    *   **B) Limited forest cover:** Forest cover affects land use, but it does not inherently attract dense populations along water lines as the main factor.
+    *   **C) Growth of manufacturing:** Manufacturing is a result of settled societies; it is not the initial attraction for the first settlements.
+    *   **D) Access to trade routes:** Coastlines and major rivers served as natural highways for transporting resources, goods, and people. This ease of trade made these locations highly desirable for settlement, resource exploitation, and population concentration.
+
+**Conclusion:** The ease of movement and exchange facilitated by access to trade routes (rivers and coasts) is the best explanation for the concentration of early settlements and high population densities in these areas.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 11/20 ---
+Q: The first stage of the demographic transition exhibits
+A) high birth rates with high but fluctuating death rates.
+B) declining birth rates with continuing high death rates.
+C) low birth rates with continuing high death rates.
+D) high birth rates with declining death rates.
+Kunci Jawaban Asli: A
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is based on the understanding of the Demographic Transition Model (DTM).
+
+**Step-by-step analysis:**
+
+1.  **Understand the Demographic Transition Model (DTM):** The DTM describes the historical shift in birth rates and death rates experienced by many countries as they transition from a pre-industrial to an industrialized and post-industrial society.
+2.  **Analyze Stage 1:** The first stage of the transition is characterized by societies where living standards are low, and mortality rates are high due to disease, famine, and poor sanitation. Conversely, birth rates remain very high because families need many children to ensure some survive and to support the labor force.
+3.  **Evaluate the Choices:**
+    *   A) high birth rates with high but fluctuating death rates. (This accurately describes the conditions of Stage 1.)
+    *   B) declining birth rates with continuing high death rates. (This describes a phase where death rates are falling, like Stage 2.)
+    *   C) low birth rates with continuing high death rates. (This is not the initial state.)
+    *   D) high birth rates with declining death rates. (This describes Stage 2.)
+
+Therefore, the first stage of the demographic transition is defined by the coexistence of high birth rates and high death rates.
+
+[A]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 12/20 ---
+Q: What is the population statistic that tells us the level of fertility at which a population will have just enough births to replace parents and compensate for early deaths?
+A) Crude birth rate
+B) Replacement level
+C) Mortality rate
+D) Total fertility rate
+Kunci Jawaban Asli: B
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The question asks for the population statistic that describes the fertility level necessary for a population to maintain itself, accounting for births and deaths.
+
+1.  **Analyze the requirement:** The statistic must represent the fertility rate where births equal the deaths plus the necessary growth to maintain the population size (replacement).
+2.  **Evaluate the choices:**
+    *   **A) Crude birth rate:** Measures the actual number of births per unit of population.
+    *   **B) Replacement level:** This is the theoretical fertility rate required for a population to replace itself and maintain a stable size, compensating for mortality.
+    *   **C) Mortality rate:** Measures the rate of deaths in a population.
+    *   **D) Total fertility rate (TFR):** Measures the average number of children born to women in a given year (the actual observed fertility).
+
+The term that specifically defines the fertility level needed for population replacement is the replacement level.
+
+[B]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 13/20 ---
+Q: What is the most rapidly growing religion in the United States today?
+A) Islam
+B) Christianity
+C) Hinduism
+D) Buddhism
+Kunci Jawaban Asli: A
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+Step-by-step derivation:
+
+1.  **Understand the Goal:** The objective is to identify the religion with the most rapid growth in the United States today among the choices: Islam, Christianity, Hinduism, and Buddhism.
+2.  **Analyze Religious Demographics in the US:** To determine the "most rapidly growing" religion, one must examine recent demographic trends, which are heavily influenced by immigration patterns.
+3.  **Evaluate Christianity:** Christianity is the largest religion in the US, but its growth rate is generally moderate, reflecting long-term demographic shifts.
+4.  **Evaluate Islam:** The Muslim population in the United States has seen significant growth in recent decades, primarily driven by immigration from various regions, making it one of the fastest-growing religious groups.
+5.  **Evaluate Hinduism and Buddhism:** While these religions also have growing populations, their growth rates are generally slower compared to the growth experienced by the Muslim community in the US.
+6.  **Conclusion:** Based on current demographic data and growth rates within the United States, Islam is the most rapidly growing religion among the options listed.
+
+[A]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 14/20 ---
+Q: The outlying area serviced by a urban center is referred to as a
+A) redline area.
+B) threshold.
+C) range.
+D) hinterland.
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct term used in geography and urban studies to describe the outlying area or region that is supplied by or dependent upon an urban center is the hinterland.
+
+*   **Hinterland:** Refers to the land or region surrounding a city or urban area, which provides resources, labor, or raw materials to the urban center.
+
+Let's evaluate the other options:
+*   **Redline area:** Not a standard geographical term for this concept.
+*   **Threshold:** Refers to a boundary or limit.
+*   **Range:** Refers to an extent or scope.
+
+Therefore, the most accurate term is hinterland.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 15/20 ---
+Q: The best definition of an urban area is
+A) the central city and its developed areas.
+B) the central city and its surrounding suburbs.
+C) the central city and its hinterlands.
+D) the central city and the adjacent counties.
+Kunci Jawaban Asli: B
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The best definition of an urban area in geography and urban studies refers to the functional and physical space that constitutes the city and its immediate functional expansion.
+
+Let's analyze the options:
+*   **A) the central city and its developed areas:** This is accurate but slightly vague.
+*   **B) the central city and its surrounding suburbs:** This captures the core city and the immediate, functionally integrated residential and commercial areas that define the urban sprawl. This is a standard way to define the urban footprint.
+*   **C) the central city and its hinterlands:** Hinterlands usually refers to the rural areas surrounding the city, which are not necessarily part of the defined urban area itself.
+*   **D) the central city and the adjacent counties:** This is a political/administrative definition, which may not align with the functional definition of an urban area.
+
+The most precise and commonly accepted definition for the spatial extent of an urban area involves the core city and the areas immediately surrounding it that have been developed as part of the urban system (suburbs).
+
+Therefore, option B is the best definition.
+
+[B]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 16/20 ---
+Q: Which of the following religions developed first?
+A) Buddhism
+B) Christianity
+C) Islam
+D) Hinduism
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is Hinduism.
+
+**Step-by-step reasoning:**
+
+1.  **Analyze the origins:** The question asks which of the listed religions developed first. This requires examining the historical timeline of their origins.
+2.  **Hinduism:** Hinduism is one of the oldest living religious traditions, originating in the Indian subcontinent. Its roots are ancient, with philosophical and religious texts dating back thousands of years.
+3.  **Buddhism:** Buddhism originated in ancient India, founded by Siddhartha Gautama around the 6th century BCE. While it developed in the same geographical region as Hinduism, it developed later.
+4.  **Christianity:** Christianity originated in the Levant (modern-day Israel/Palestine) and began to develop in the 1st century CE.
+5.  **Islam:** Islam originated in the Arabian Peninsula and was established in the 7th century CE.
+
+**Conclusion:** Based on historical and archaeological evidence, Hinduism is the oldest of these four major religions.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 17/20 ---
+Q: Which one of the following is NOT a characteristic of world cities?
+A) World cities contain the headquarters of many transnational corporations.
+B) World cities are well connected to secondary-level world cities.
+C) World cities contain many offices of multinational organizations.
+D) World cities are found only in the northern and western hemispheres.
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The question asks which statement is NOT a characteristic of world cities.
+
+Let's analyze each option:
+
+*   **A) World cities contain the headquarters of many transnational corporations.** This is true. World cities serve as major economic hubs where multinational corporations establish their global headquarters or significant operational centers.
+*   **B) World cities are well connected to secondary-level world cities.** This is true. World cities form an interconnected network, often interacting with regional or secondary economic centers.
+*   **C) World cities contain many offices of multinational organizations.** This is true. International organizations (like the UN, IMF, etc.) and multinational corporations have their major offices in world cities due to their concentration of talent and infrastructure.
+*   **D) World cities are found only in the northern and western hemispheres.** This is false. World cities are distributed globally. Major world cities exist in the Southern Hemisphere (e.g., São Paulo, Buenos Aires, Sydney, Singapore, Mumbai). Therefore, restricting them *only* to the northern and western hemispheres is incorrect.
+
+Since the statement in D is factually incorrect regarding the global distribution of world cities, it is the characteristic that is NOT true.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 18/20 ---
+Q: Which type of transportation system created the star-shaped city pattern?
+A) Highways to airports that link cities
+B) Interstate highways that link cities
+C) Beltways around cities
+D) Streetcar and trolley lines extending from the CBD
+Kunci Jawaban Asli: D
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is the one that describes radial transportation lines extending from a central point.
+
+**Step-by-step analysis:**
+
+1.  **Understand the Goal:** The question asks which transportation system created a "star-shaped city pattern." A star pattern is characterized by spokes radiating from a central point (the CBD).
+2.  **Analyze the Options in Context:**
+    *   A) Highways to airports and B) Interstate highways are regional links, not the internal structure that defines the city's layout.
+    *   C) Beltways are circular routes, which define rings, not radiating spokes.
+    *   D) Streetcar and trolley lines were historical public transit systems that extended lines directly from the central business district (CBD) outward to connect residential and commercial areas. This radial development pattern is the classic mechanism for creating a star pattern in city growth.
+3.  **Conclusion:** The radial development pattern created by public transit lines extending from the center is the defining feature of a star-shaped city layout.
+
+Therefore, streetcar and trolley lines are the system responsible for this pattern.
+
+[D]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 19/20 ---
+Q: In which urban US setting below would you expect to find planned communities?
+A) Ghettos
+B) Suburbs
+C) CBDs
+D) Transition zones
+Kunci Jawaban Asli: B
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The correct answer is B.
+
+**Step-by-step analysis:**
+
+1.  **Define Planned Communities:** Planned communities are residential areas developed under a specific, comprehensive master plan, often involving coordinated design, infrastructure, and specific socio-economic goals. They represent intentional, organized development rather than organic, unplanned growth.
+
+2.  **Analyze the Options in the Context of US Urban Geography:**
+
+    *   **A) Ghettos:** Ghettos are areas characterized by concentrated poverty and segregation, often resulting from historical discriminatory policies. Development in ghettos is typically reactive and unplanned, not characterized by comprehensive, planned community design.
+    *   **B) Suburbs:** The expansion of the suburbs in the US was heavily driven by the desire for planned living, standardized housing, and separation from the perceived problems of the inner city. Planned communities (like post-war subdivisions) are a defining feature of suburban development.
+    *   **C) CBDs (Central Business Districts):** CBDs are the core commercial and administrative centers. Development here is typically dense and evolved organically over long periods, although modern CBDs involve planned redevelopment. Planned communities are not the defining characteristic of the CBD.
+    *   **D) Transition zones:** Transition zones are areas where different land uses meet (e.g., industrial meeting residential). These areas are often characterized by mixed, sometimes chaotic, development rather than highly organized planned communities.
+
+3.  **Conclusion:** Planned communities are most strongly associated with the residential expansion outside the dense urban core, which is the definition of the suburbs.
+
+[B]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 20/20 ---
+Q: The latitude and longitude coordinates of a place are an example of
+A) a formal region.
+B) a functional region.
+C) an absolute location.
+D) a relative location.
+Kunci Jawaban Asli: C
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+The question asks what type of location latitude and longitude coordinates represent.
+
+1.  **Analyze the terms:**
+    *   **Absolute Location:** Refers to the precise location of a place on the Earth's surface, determined by coordinates (latitude and longitude).
+    *   **Relative Location:** Refers to the location of a place in relation to other places or features (e.g., near, far, north of).
+    *   **Formal Region:** Refers to an area defined by a shared, uniform characteristic (e.g., a state, a biome).
+    *   **Functional Region:** Refers to an area organized around a central point or node, defined by interaction (e.g., a metropolitan area).
+
+2.  **Apply to the example:** Latitude and longitude are numerical coordinates that pinpoint an exact, specific position on the globe. This definition perfectly matches the concept of absolute location.
+
+Therefore, latitude and longitude coordinates are an example of an absolute location.
+
+[C]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+[ 📊 ] REKAPITULASI HASIL BASELINE (SINGLE MODEL)
+Total Soal Diuji  : 20
+Total Jawaban Benar: 18
+Akurasi Akhir     : 90.00%
+============================================================
+
