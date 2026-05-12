@@ -1,0 +1,212 @@
+LLM BASELINE EVALUATOR LOG - BIOGRAPHY
+Started at: 2026-05-12 10:28:56
+Dataset: TriviaQA | Model: gemma4:e2b
+============================================================
+
+============================================================
+--- Soal 1/20 ---
+Q: Who was the man behind The Chipmunks?
+Kunci Jawaban Asli: David Seville
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Simon and Alvin]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 2/20 ---
+Q: Which Lloyd Webber musical premiered in the US on 10th December 1993?
+Kunci Jawaban Asli: Sunset Boulevard
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Phantom of the Opera]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 3/20 ---
+Q: Who was the next British Prime Minister after Arthur Balfour?
+Kunci Jawaban Asli: Campbell-Bannerman
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[David Lloyd George]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 4/20 ---
+Q: Who had a 70s No 1 hit with Kiss You All Over?
+Kunci Jawaban Asli: Exile
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+I am unable to find any record of a song titled "Kiss You All Over" achieving a No. 1 hit position on the charts during the 1970s. Therefore, I cannot provide the name of the artist based on this specific information.
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 5/20 ---
+Q: What claimed the life of singer Kathleen Ferrier?
+Kunci Jawaban Asli: Cancer
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[No specific person claimed the life of singer Kathleen Ferrier; she died of natural causes in 1967.]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 6/20 ---
+Q: Rita Coolidge sang the title song for which Bond film?
+Kunci Jawaban Asli: Octopussy
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Goldfinger]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 7/20 ---
+Q: What was the last US state to reintroduce alcohol after prohibition?
+Kunci Jawaban Asli: Utah
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Delaware]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 8/20 ---
+Q: Which actress was voted Miss Greenwich Village in 1942?
+Kunci Jawaban Asli: Lauren Bacall
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+I do not have specific historical records detailing which actress was voted Miss Greenwich Village in 1942.
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 9/20 ---
+Q: What is the Japanese share index called?
+Kunci Jawaban Asli: Nikkei
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Nikkei index]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 10/20 ---
+Q: What was the name of Michael Jackson's autobiography written in 1988?
+Kunci Jawaban Asli: Moonwalk
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Michael Jackson: Into the Machine]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 11/20 ---
+Q: In which decade did stereo records first go on sale?
+Kunci Jawaban Asli: 1930s
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[1950s]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 12/20 ---
+Q: In what year's Olympics were electric timing devices and a public-address system used for the first time?
+Kunci Jawaban Asli: In 1912, in Stockholm
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[1908]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 13/20 ---
+Q: Which volcano in Tanzania is the highest mountain in Africa?
+Kunci Jawaban Asli: Kilimanjaro
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Mount Kilimanjaro]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 14/20 ---
+Q: The flag of Libya is a plain rectangle of which color?
+Kunci Jawaban Asli: Green
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Red, black, and green]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 15/20 ---
+Q: Of which African country is Niamey the capital?
+Kunci Jawaban Asli: Niger
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Niger]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+--- Soal 16/20 ---
+Q: Who was the director of the CIA from 1976-81?
+Kunci Jawaban Asli: George Bush
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[John McCone]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 17/20 ---
+Q: Which musical featured the song The Street Where You Live?
+Kunci Jawaban Asli: My Fair Lady
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[Oklahoma!]
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 18/20 ---
+Q: "Who was the target of the failed ""Bomb Plot"" of 1944?"
+Kunci Jawaban Asli: Hitler
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+I do not have sufficient context to identify a specific "Bomb Plot" of 1944 and its target. Please provide additional details regarding the event you are referring to.
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 19/20 ---
+Q: Who had an 80s No 1 hit with Hold On To The Nights?
+Kunci Jawaban Asli: Richard Marx
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+I am unable to find any record of a song titled "Hold On To The Nights" achieving the No. 1 spot on the charts during the 1980s. Therefore, I cannot provide an artist associated with that specific hit.
+
+[ ❌ ] STATUS: SALAH
+
+============================================================
+--- Soal 20/20 ---
+Q: Who directed the classic 30s western Stagecoach?
+Kunci Jawaban Asli: John Ford
+
+>>> HASIL PIKIRAN & JAWABAN LLM:
+[John Ford]
+
+[ ✅ ] STATUS: BENAR (Format Tepat [...])
+
+============================================================
+[ 📊 ] REKAPITULASI HASIL BASELINE (SINGLE MODEL)
+Total Soal Diuji  : 20
+Total Jawaban Benar: 5
+Akurasi Akhir     : 25.00%
+============================================================
+
